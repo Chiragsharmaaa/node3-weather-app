@@ -23,12 +23,20 @@ app.use(express.static(PublicDirectoryPath))
 
 
 // for homepage
-app.get('/', (req,res) => {
+app.get('', (req,res) => {
     res.render('index', {
-        title: 'weather',
+        title: 'Weather',
         name: 'Chirag Sharma'        
     })
 })
+
+// app.get('/index',(req, res) => {
+//     res.send({
+//         forecast: forecastData,
+//         location,
+//     })
+// })
+
 
 // for about page
 app.get('/about', (req,res) => {
